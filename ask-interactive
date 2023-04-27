@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Copyright 2023 GencoreOperative
+# 
+# Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+
+PROMPT="$@"
+
+# The ${PROMPT:+ --prompt "$PROMPT"} parameter expansion adds the --prompt option only if $PROMPT is not empty.
+docker run --rm -ti gencore/alpaca.cpp:latest --interactive-start${PROMPT:+ --prompt "$PROMPT"}

@@ -1,3 +1,7 @@
+# Copyright 2023 GencoreOperative
+# 
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+
 # Assemble 
 # Usage:
 # make         # compile each version of the Docker image
@@ -12,7 +16,7 @@ all: build
 VPATH = docker
 
 # Generated Docker images are tagged using the current Git version
-alpaca-git-commit = c5ae5d08a5
+alpaca-git-commit = 899fa59954
 git-commit = $(shell git rev-parse --short HEAD)
 
 tag-name = gencore/alpaca.cpp

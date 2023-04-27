@@ -1,4 +1,9 @@
 #/bin/bash
+
+# Copyright 2023 GencoreOperative
+# 
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+
 # A very specific utility script that can interpret a the downloads.txt file
 # Start by looking for the existing file, if present, check against an md5sum.
 # If the md5sum does not match, delete the file and start the download.

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Copyright 2023 GencoreOperative
+# 
+# Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+
+function half_cpus() {
+    cpus=$(nproc)
+    half=$((cpus / 4))
+    if [[ $half -eq 0 ]]; then
+        half=1
+    fi
+    echo $half
+}
+
+#CORES=$(half_cpus)
+CORES=1
+>&2  echo "CPUS used: $CORES"
+
+docker run --rm -ti gencore/alpaca.cpp:latest --threads "$CORES" --prompt "$@"
