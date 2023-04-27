@@ -8,6 +8,9 @@
 # single use mode that might be suitable for command line
 # interaction.
 
+# Reconstitute the model file
+cat ggml-alpaca-7b-q4.bin-part-* > ggml-alpaca-7b-q4.bin
+
 function half_cpus() {
     cpus=$(nproc)
     half=$((cpus / 2))

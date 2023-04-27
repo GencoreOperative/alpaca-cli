@@ -27,13 +27,13 @@ ggml-alpaca-7b-q4.bin: download.txt
 	(cd model && sh download.sh ggml-alpaca-7b-q4.bin)
 
 build: ggml-alpaca-7b-q4.bin
-	(cd docker && cp ../model/ggml-alpaca-7b-q4.bin .)
+	(cd docker && split -n 8 -d ../model/ggml-alpaca-7b-q4.bin ggml-alpaca-7b-q4.bin-part-)
 	DOCKER_BUILDKIT=1 docker build \
 	    --build-arg ALPACA_COMMIT=$(alpaca-git-commit) \
 	    -t $(docker-tag) \
 	    -t $(docker-tag-latest) \
 	    docker
-	(cd docker && rm ggml-alpaca-7b-q4.bin)
+	(cd docker && rm ggml-alpaca-7b-q4.bin-part-*)
 
 clean:
 	
