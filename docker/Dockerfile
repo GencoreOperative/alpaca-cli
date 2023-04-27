@@ -39,7 +39,7 @@ RUN make chat
 
 FROM ubuntu:lunar-20230314
 
-ADD ggml-alpaca-7b-q4.bin .
+ADD ggml-alpaca-7b-q4.bin /
 COPY --from=0 /work/alpaca.cpp/chat /chat
 ADD entrypoint.sh /entrypoint.sh
 

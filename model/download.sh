@@ -31,7 +31,7 @@ check() {
 
 if [ -f "$FILE" ]; then
 	check "$FILE" "$MD5SUM"
-	if [ $? ]; then
+	if [ $? -eq 0 ]; then
 		exit 0
 	fi
 fi

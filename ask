@@ -4,4 +4,4 @@
 # 
 # Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
 
-docker run --rm -ti gencore/alpaca.cpp:latest --prompt "$@"
+docker run --rm -ti gencore/alpaca-cli:latest --prompt "$@"
