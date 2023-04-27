@@ -61,7 +61,7 @@ script to then repeatedly time how long it takes to generate the output:
 
 | CPUs | Percentage |  Average (seconds) |
 |------|------------|--------------------|
-| 1    | 6.25%      |                    |
+| 1    | 6.25%      | 139.1              |
 | 2    | 12.5%      | 70.7               |
 | 4    | 25%        | 39.1               |
 | 8    | 50%        | 31.6               |
@@ -70,8 +70,9 @@ script to then repeatedly time how long it takes to generate the output:
 | 14   | 87.5%      | 27.4               |
 | 16   | 100%       | 63.9
 
-This shows that the greatest performance can be achieved when operating at X% of 
-available CPUs on the system.
+This shows that once we allocate around half the number of system CPUs we are achieving close to the 
+optimal performance. This is useful to be aware of as we do not want to swamp the system for little
+additional gain.
 
 ## Larger Models
 

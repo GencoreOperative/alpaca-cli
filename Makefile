@@ -37,6 +37,6 @@ clean:
 
 publish: build
 	@echo "Pushing to DockerHub"
-	docker login
+	docker login registry-1.docker.io
 	docker push $(docker-tag)
 	docker push $(docker-tag-latest)
