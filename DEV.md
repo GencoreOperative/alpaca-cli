@@ -30,6 +30,8 @@ options:
                         model path (default: ggml-alpaca-7b-q4.bin)
 ```
 
+The `--prompt` flag does not work in interactive mode, it instead forces the utility
+to work in non-interactive mode.
 
 ## Performance Testing
 

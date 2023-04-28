@@ -21,10 +21,10 @@ function half_cpus() {
 }
 
 CORES=$(half_cpus)
->&2  echo "Using $CORES CPUs"
 
 # Output license reminder
 >&2 echo "Alpaca is intended only for academic research and any commercial use is prohibited"
 >&2 echo "Please see https://crfm.stanford.edu/2023/03/13/alpaca.html for more details"
+>&2 echo ""
 
 ./chat --threads "$CORES" "$@" 2>/dev/null
